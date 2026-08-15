@@ -419,7 +419,7 @@
     .chat-panel{display:flex;flex-direction:column;min-width:0;background:white}.chat-header{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;min-height:58px}.chat-header-avatar{width:36px;height:36px;border-radius:12px;background:#eaf0e5;color:#466b54;display:grid;place-items:center;font-size:11px;font-weight:900}.chat-header strong,.chat-header span{display:block}.chat-header strong{font-size:13px}.chat-header span{font-size:9px;color:var(--muted);margin-top:3px}.chat-messages{flex:1;min-height:430px;padding:18px;overflow:auto;background:linear-gradient(#fffefa,#fff)}.chat-empty{text-align:center;max-width:340px;margin:100px auto 0;color:var(--muted)}.chat-empty-icon{width:46px;height:46px;border-radius:14px;background:#edf4e9;color:#466b54;display:grid;place-items:center;margin:0 auto 10px;font-size:20px}.chat-empty h3{font-family:Georgia,serif;color:var(--ink);margin:0 0 6px;font-size:20px}.chat-empty p{font-size:10px;line-height:1.55;margin:0}.chat-message-row{display:flex;margin:7px 0}.chat-message-row.mine{justify-content:flex-end}.chat-bubble{max-width:min(70%,520px);padding:9px 11px;border-radius:13px;background:#f1f4ee;border:1px solid #e5e9e1}.chat-message-row.mine .chat-bubble{background:#edf4e9;border-color:#d7e5d1}.chat-author{font-size:8px;color:#6e7b73;font-weight:800;margin-bottom:3px}.chat-text{font-size:11px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}.chat-time{font-size:7px;color:#909a93;margin-top:5px}.chat-composer{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fbfcf8}.chat-composer input{flex:1;border:1px solid #d9ddd5;border-radius:11px;padding:10px 11px;outline:none;background:white}.chat-composer .primary-btn{min-width:74px}.admin-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.admin-account-row{display:flex;align-items:center;gap:9px;padding:9px 18px;border-bottom:1px solid #eef0e9}.admin-account-copy{min-width:0;flex:1}.admin-account-copy strong,.admin-account-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.admin-account-copy small{font-size:9px;color:var(--muted);margin-top:2px}.reset-row{padding:12px 18px;border-bottom:1px solid #eef0e9}.reset-meta{font-size:9px;color:var(--muted);margin-top:4px;line-height:1.45}.reset-actions{display:flex;gap:6px;margin-top:8px}.reset-actions input{flex:1;border:1px solid #d9ddd5;border-radius:8px;padding:7px 8px}.chat-system-note{font-size:8px;color:#7a867e;text-align:center;margin:12px 0}.chat-unread{width:7px;height:7px;border-radius:50%;background:#a85e41;display:inline-block}.admin-form select{border:1px solid #d9ddd5;border-radius:8px;padding:10px 11px;background:white;color:var(--ink)}
     @media (max-width: 1000px) { .admin-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.admin-columns{grid-template-columns:1fr;}.chat-shell{grid-template-columns:1fr;}.chat-sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.chat-messages{min-height:360px}.admin-input-grid{grid-template-columns:1fr;} }
 
-  /* ===== Mobile-first V13.1 optimization ===== */
+  /* ===== Mobile-first V13.2 optimization ===== */
 html, body { overflow-x: hidden; }
 body { padding-bottom: env(safe-area-inset-bottom); }
 button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, input, textarea { touch-action: manipulation; }
@@ -969,7 +969,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       const name = displayName(activeUsername);
       document.getElementById('profileName').textContent = name;
       document.getElementById('profileAvatar').textContent = activeUsername.slice(0, 2).toUpperCase();
-      document.getElementById('viewTitle').textContent = `Good morning, ${name}`;
+      document.getElementById('viewTitle').textContent = `Hi, ${name}`;
       loginScreen.classList.add('hidden');
       localStorage.setItem('tripPlannerUsername', activeUsername);
       renderAdminVisibility();
@@ -1658,9 +1658,24 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
           createdAt: Date.now(),
           toolkit: {}
         };
-        const changes = { [`tripPlans/${planRef.key}`]: newTrip };
-        [activeUsername, ...people].forEach(username => { changes[`userTrips/${username}/${planRef.key}`] = true; });
+        const tripId = planRef.key;
+        const changes = { [`tripPlans/${tripId}`]: newTrip };
+        [activeUsername, ...people].forEach(username => { changes[`userTrips/${username}/${tripId}`] = true; });
+
+        // Persist the trip and membership links together. Then update the local
+        // calendar immediately so the new trip is visible even before the
+        // realtime listeners deliver their next snapshot.
         await update(ref(database), changes);
+        newTrip.id = tripId;
+        newTrip.members = Object.fromEntries([activeUsername, ...people].map(username => [username, true]));
+        allTrips[tripId] = newTrip;
+        [activeUsername, ...people].forEach(username => {
+          if (username === activeUsername) userTripIds[tripId] = true;
+        });
+        refreshTripViews();
+        calendarCursor = new Date(`${startDate}T00:00:00`);
+        renderCalendar();
+
         closeModal(planModal);
         event.target.reset();
         document.getElementById('availabilityPanel').hidden = true;
@@ -1668,7 +1683,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
         refreshUserPickers();
         showToast(`“${name}” has been saved to your account.`);
       } catch (error) {
-        showToast('Your plan could not be saved. Check your Firebase Database rules.');
+        showToast(error?.message ? `Could not save the trip: ${error.message}` : 'Could not save the trip. Check your Firebase Database rules.');
       } finally {
         submitButton.disabled = false;
         submitButton.textContent = 'Create plan';
