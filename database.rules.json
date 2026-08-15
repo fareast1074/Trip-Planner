@@ -7,6 +7,5 @@
     "userInspiration": { ".read": true, ".write": true },
     "passwordResetRequests": { ".read": true, ".write": true },
     "appSettings": { ".read": true, ".write": true },
-    "chatRooms": { ".read": true, ".write": true }
   }
 }

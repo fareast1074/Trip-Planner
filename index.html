@@ -408,16 +408,6 @@
     .admin-badge-note { color:#6a7b70; font-size:10px; }
 
     .nav-dot{width:7px;height:7px;border-radius:50%;background:#a85e41;display:inline-block;margin-left:auto;box-shadow:0 0 0 3px rgba(168,94,65,.12)}
-    .chat-shell{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:610px;border:1px solid var(--line);border-radius:18px;background:#fffefa;overflow:hidden;box-shadow:0 10px 30px rgba(51,68,57,.05)}
-    .chat-sidebar{border-right:1px solid var(--line);display:flex;flex-direction:column;min-width:0;background:#fbfcf8}
-    .chat-sidebar-head{padding:18px 16px 12px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-    .chat-sidebar-head h2{margin:0;font-family:Georgia,serif;font-size:20px;color:var(--ink)}
-    .chat-sidebar-head p{margin:4px 0 0;color:var(--muted);font-size:10px;line-height:1.45}
-    .chat-search-wrap{padding:0 14px 12px}.chat-search-wrap input{width:100%;border:1px solid #d9ddd5;border-radius:10px;padding:9px 10px;background:white;color:var(--ink);outline:none;box-sizing:border-box}
-    .chat-list-section{padding:0 8px 12px}.chat-section-label{display:block;color:#7b857e;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:6px 8px}
-    .chat-list{display:grid;gap:3px}.chat-item{display:flex;align-items:center;gap:9px;width:100%;border:0;background:transparent;border-radius:10px;padding:9px 8px;text-align:left;cursor:pointer;color:var(--ink)}.chat-item:hover,.chat-item.active{background:#edf4e9}.chat-avatar{width:32px;height:32px;border-radius:10px;background:#dfe9da;color:#466b54;display:grid;place-items:center;font-size:10px;font-weight:900;flex:none}.chat-item-copy{min-width:0;flex:1}.chat-item-copy strong,.chat-item-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chat-item-copy strong{font-size:11px}.chat-item-copy small{color:var(--muted);font-size:9px;margin-top:2px}.chat-item-badge{font-size:8px;color:#6d7c72;background:#eef3eb;padding:3px 5px;border-radius:999px;font-weight:800}
-    .chat-panel{display:flex;flex-direction:column;min-width:0;background:white}.chat-header{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;min-height:58px}.chat-header-avatar{width:36px;height:36px;border-radius:12px;background:#eaf0e5;color:#466b54;display:grid;place-items:center;font-size:11px;font-weight:900}.chat-header strong,.chat-header span{display:block}.chat-header strong{font-size:13px}.chat-header span{font-size:9px;color:var(--muted);margin-top:3px}.chat-messages{flex:1;min-height:430px;padding:18px;overflow:auto;background:linear-gradient(#fffefa,#fff)}.chat-empty{text-align:center;max-width:340px;margin:100px auto 0;color:var(--muted)}.chat-empty-icon{width:46px;height:46px;border-radius:14px;background:#edf4e9;color:#466b54;display:grid;place-items:center;margin:0 auto 10px;font-size:20px}.chat-empty h3{font-family:Georgia,serif;color:var(--ink);margin:0 0 6px;font-size:20px}.chat-empty p{font-size:10px;line-height:1.55;margin:0}.chat-message-row{display:flex;margin:7px 0}.chat-message-row.mine{justify-content:flex-end}.chat-bubble{max-width:min(70%,520px);padding:9px 11px;border-radius:13px;background:#f1f4ee;border:1px solid #e5e9e1}.chat-message-row.mine .chat-bubble{background:#edf4e9;border-color:#d7e5d1}.chat-author{font-size:8px;color:#6e7b73;font-weight:800;margin-bottom:3px}.chat-text{font-size:11px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}.chat-time{font-size:7px;color:#909a93;margin-top:5px}.chat-composer{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fbfcf8}.chat-composer input{flex:1;border:1px solid #d9ddd5;border-radius:11px;padding:10px 11px;outline:none;background:white}.chat-composer .primary-btn{min-width:74px}.admin-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.admin-account-row{display:flex;align-items:center;gap:9px;padding:9px 18px;border-bottom:1px solid #eef0e9}.admin-account-copy{min-width:0;flex:1}.admin-account-copy strong,.admin-account-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.admin-account-copy small{font-size:9px;color:var(--muted);margin-top:2px}.reset-row{padding:12px 18px;border-bottom:1px solid #eef0e9}.reset-meta{font-size:9px;color:var(--muted);margin-top:4px;line-height:1.45}.reset-actions{display:flex;gap:6px;margin-top:8px}.reset-actions input{flex:1;border:1px solid #d9ddd5;border-radius:8px;padding:7px 8px}.chat-system-note{font-size:8px;color:#7a867e;text-align:center;margin:12px 0}.chat-unread{width:7px;height:7px;border-radius:50%;background:#a85e41;display:inline-block}.admin-form select{border:1px solid #d9ddd5;border-radius:8px;padding:10px 11px;background:white;color:var(--ink)}
-    @media (max-width: 1000px) { .admin-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.admin-columns{grid-template-columns:1fr;}.chat-shell{grid-template-columns:1fr;}.chat-sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.chat-messages{min-height:360px}.admin-input-grid{grid-template-columns:1fr;} }
 
   /* ===== Mobile-first V13.2 optimization ===== */
 html, body { overflow-x: hidden; }
@@ -517,12 +507,6 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
   .user-picker-item, .user-picker label { min-height: 44px; padding: 9px 10px; }
   .availability-panel { max-height: 210px; overflow-y: auto; }
 
-  .chat-layout { grid-template-columns: 1fr !important; min-height: 0 !important; }
-  .chat-list { max-height: 210px; border-right: 0 !important; border-bottom: 1px solid var(--line); overflow-x: auto; display: flex; gap: 8px; }
-  .chat-list-item { min-width: 150px; flex: 0 0 auto; }
-  .chat-main { min-height: 420px; }
-  .chat-messages { min-height: 310px !important; max-height: 52dvh !important; }
-  .chat-compose input, .chat-compose textarea { font-size: 16px; }
 
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table { min-width: 620px; }
@@ -535,13 +519,62 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
 
 @media (max-width: 420px) {
   .main { padding-left: 11px; padding-right: 11px; }
-  .top-actions .primary-btn { font-size: 0; width: 42px; padding: 0; }
-  .top-actions .primary-btn svg { width: 17px; height: 17px; }
+  .top-actions .primary-btn { font-size: 10px; width: auto; min-width: 42px; padding: 9px 10px; }
+  .top-actions .primary-btn svg { width: 15px; height: 15px; }
   .overview-stats { grid-template-columns: 1fr 1fr !important; }
-  .calendar-cell { min-height: 52px; }
-  .calendar-event { display: none; }
+  .calendar-cell { min-height: 56px; padding: 4px 3px; }
+  .calendar-event { display: block; font-size: 7px; padding: 2px 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .nav-item { min-width: 60px; font-size: 8.5px; }
 }
+
+
+@media (max-width: 760px) {
+  html, body { width:100%; min-height:100%; }
+  .modal-layer.open { overflow-y:auto; -webkit-overflow-scrolling:touch; }
+  .modal { overscroll-behavior:contain; }
+  .modal-header { z-index:3; }
+  .modal-actions { gap:8px; }
+  .user-picker { width:100%; }
+  .availability-btn { width:100%; min-height:46px; }
+  .availability-panel { width:100%; box-sizing:border-box; }
+}
+
+
+/* V14.1 mobile polish for members, polls, and shared expenses */
+@media (max-width: 760px) {
+  body { overflow-x: hidden; }
+  .content, .main, .page { min-width: 0; width: 100%; }
+  .v15-feature-grid { grid-template-columns: 1fr !important; gap: 10px; margin-top: 12px; }
+  .v15-card, .v15-card.wide { grid-column: auto !important; padding: 13px; border-radius: 14px; }
+  .v15-form-row { display: grid !important; grid-template-columns: 1fr !important; gap: 8px !important; }
+  .v15-form-row input, .v15-form-row select, .v15-form-row textarea, .v15-form-row button { width: 100% !important; min-width: 0; box-sizing: border-box; min-height: 44px; font-size: 16px; }
+  .v15-list { width: 100%; min-width: 0; }
+  .v15-row { display: flex; flex-direction: column; align-items: stretch !important; gap: 9px; padding: 11px 0; }
+  .v15-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; width: 100%; }
+  .v15-actions button, .v15-mini { min-height: 42px; width: 100%; box-sizing: border-box; }
+  .v15-option { display: grid !important; grid-template-columns: 1fr auto; gap: 7px; align-items: center; }
+  .v15-option .v15-bar { grid-column: 1 / -1; width: 100%; }
+  .v15-option > .v15-muted { justify-self: end; }
+  .trip-detail-section, .trip-toolkit, .trip-detail-body { min-width: 0; width: 100%; }
+  #tripDetailModal .modal { width: 100%; max-width: 100%; box-sizing: border-box; }
+  #tripMembersList, #pollList, #sharedExpenseList, #settlementList { overflow-wrap: anywhere; }
+}
+@media (max-width: 420px) {
+  .v15-card { padding: 11px; }
+  .v15-actions { grid-template-columns: 1fr; }
+  .modal-header h2 { font-size: 21px; }
+  .trip-detail-actions { grid-template-columns: 1fr !important; }
+}
+
+    .v15-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    .v15-card{border:1px solid var(--line);border-radius:12px;background:#fffefb;padding:15px}
+    .v15-card.wide{grid-column:1/-1}
+    .v15-card h4{margin:0 0 10px;font:600 16px "Playfair Display",serif}
+    .v15-list{display:grid;gap:8px}.v15-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:9px 10px;border:1px solid #e3e7df;border-radius:9px;background:#fbfcf8}
+    .v15-actions{display:flex;gap:6px;flex-wrap:wrap}.v15-mini{border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 8px;font-size:10px;font-weight:700;color:var(--moss)}.v15-danger{color:#a84f39;border-color:#ead3c9}.v15-muted{font-size:10px;color:var(--muted)}
+    .v15-form-row{display:grid;grid-template-columns:1.2fr 1fr auto;gap:7px}.v15-form-row input,.v15-form-row select{width:100%;box-sizing:border-box;border:1px solid #d9ddd5;border-radius:8px;padding:9px;font:inherit}
+    .v15-option{display:flex;gap:8px;align-items:center}.v15-bar{height:6px;border-radius:99px;background:#edf1ea;overflow:hidden}.v15-bar span{display:block;height:100%;background:var(--moss)}
+    @media(max-width:760px){.v15-feature-grid{grid-template-columns:1fr}.v15-card.wide{grid-column:auto}.v15-form-row{grid-template-columns:1fr}.v15-row{align-items:flex-start;flex-direction:column}.v15-actions{width:100%}.v15-actions button{flex:1;min-height:40px}}
 
 </style>
 </head>
@@ -577,7 +610,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
         <button class="nav-item active" data-view="overview"><svg class="nav-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Overview</span></button>
         <button class="nav-item" data-view="calendar"><svg class="nav-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg><span>My calendar</span></button>
         <button class="nav-item" data-view="plans"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 20l5-16 5 16 4-10 4 10"/><path d="M4 20h16"/></svg><span>My trips</span></button>
-        <button class="nav-item" data-view="groups"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M15 15.5a4 4 0 0 1 5.5 3.7"/></svg><span>Group trips</span></button><button class="nav-item" data-view="chat"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2h9A3.5 3.5 0 0 1 20 5.5v7A3.5 3.5 0 0 1 16.5 16H11l-4.7 4.2c-.6.5-1.5.1-1.4-.7l.5-3.5A3.5 3.5 0 0 1 2 12.5v-7A3.5 3.5 0 0 1 4 5.5Z"/></svg><span>Chat</span><span class="nav-dot" id="chatUnreadDot" hidden></span></button>
+        <button class="nav-item" data-view="groups"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M15 15.5a4 4 0 0 1 5.5 3.7"/></svg><span>Group trips</span></button>
         <button class="nav-item" data-view="inspiration"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M20 12.3V7a2 2 0 0 0-2-2h-5.3a2 2 0 0 0-1.4.6L4.6 12.3a2 2 0 0 0 0 2.8l4.3 4.3a2 2 0 0 0 2.8 0l7.7-7.7a2 2 0 0 0 .6-1.4Z"/><circle cx="16.2" cy="8.8" r="1.2"/></svg><span>Inspiration</span></button>
         <button class="nav-item admin-nav-item" id="adminNav" data-view="admin"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 3 4.5 6.2v5.2c0 4.7 3.1 8 7.5 9.6 4.4-1.6 7.5-4.9 7.5-9.6V6.2L12 3Z"/><path d="m9.2 12 1.8 1.8 3.8-4"/></svg><span>Admin center</span></button>
       </nav>
@@ -632,33 +665,6 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
         <div class="plans-head"><div><h2>Saved inspiration</h2><p>Keep places, ideas, and destinations close until you’re ready to turn them into a trip.</p></div><button class="primary-btn" id="addInspiration"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Save a place</button></div>
         <div class="inspiration-toolbar"><div class="plans-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="inspirationSearch" placeholder="Search saved places…" autocomplete="off"/></div><div class="chip-row" id="inspirationFilters"><button class="filter-chip active" type="button" data-inspiration-filter="all">All</button><button class="filter-chip" type="button" data-inspiration-filter="Nature">Nature</button><button class="filter-chip" type="button" data-inspiration-filter="Beach">Beach</button><button class="filter-chip" type="button" data-inspiration-filter="City">City</button><button class="filter-chip" type="button" data-inspiration-filter="Food">Food</button><button class="filter-chip" type="button" data-inspiration-filter="Culture">Culture</button></div></div>
         <div class="inspiration-grid" id="inspirationGrid"></div>
-      </section>
-
-      <section class="content-view" id="chat">
-        <div class="chat-shell">
-          <aside class="chat-sidebar">
-            <div class="chat-sidebar-head">
-              <div><h2>Messages</h2><p>Everyone can chat. Start a private conversation, join the community, or talk inside a shared trip.</p></div>
-              <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><button class="small-btn" id="newDirectChat" type="button">New chat</button><button class="small-btn" id="refreshChat" type="button">Refresh</button><button class="small-btn" id="chatHelp" type="button">Chat help</button></div>
-            </div>
-            <div class="chat-search-wrap"><input id="chatSearch" placeholder="Search people or trips…" aria-label="Search chats" /></div>
-            <div class="chat-everyone-note"><strong>Chat is open to everyone.</strong> Personal chats are available with every other registered user.</div>
-            <div class="chat-list-section"><span class="chat-section-label">Everyone</span><div id="communityChatList" class="chat-list"></div></div>
-            <div class="chat-list-section"><span class="chat-section-label">Personal chats</span><div id="directChatList" class="chat-list"></div></div>
-            <div class="chat-list-section"><span class="chat-section-label">Trip groups</span><div id="groupChatList" class="chat-list"></div></div>
-          </aside>
-          <section class="chat-panel">
-            <div class="chat-header" id="chatHeader">
-              <div class="chat-header-avatar" id="chatHeaderAvatar">—</div>
-              <div><strong id="chatHeaderTitle">Choose a conversation</strong><span id="chatHeaderSubtitle">Your messages stay inside your Trip_Planner workspace.</span></div>
-            </div>
-            <div class="chat-messages" id="chatMessages"><div class="chat-empty"><div class="chat-empty-icon">✦</div><h3>Chat with everyone</h3><p>Use the Community Lounge for everyone, choose any person for a private 1:1 chat, or open a shared trip group.</p></div></div>
-            <form class="chat-composer" id="chatComposer">
-              <input id="chatMessageInput" maxlength="1000" autocomplete="off" placeholder="Write a message…" disabled />
-              <button class="primary-btn" id="chatSend" type="submit" disabled>Send</button>
-            </form>
-          </section>
-        </div>
       </section>
 
       <section class="content-view" id="admin">
@@ -742,6 +748,13 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
           <article class="trip-tool-card wide"><div class="tool-card-head"><div><h4>Itinerary builder</h4><div class="tool-muted">Build a shared day-by-day schedule.</div></div><button class="small-btn" id="printItinerary" type="button">Print itinerary</button></div><div class="tool-input-row" style="grid-template-columns:100px 1.4fr 1fr auto"><input id="itinDate" type="date"/><input id="itinTitle" placeholder="Activity or stop"/><input id="itinNote" placeholder="Time, address, reservation…"/><button class="tool-add" id="addItin" type="button">Add</button></div><div id="itineraryList"></div></article>
           <article class="trip-tool-card wide"><div class="tool-card-head"><div><h4>Shared trip notes</h4><div class="tool-muted">Everyone can update the same notes.</div></div><span class="tool-muted" id="notesSaved">Shared</span></div><textarea id="toolNotes" style="width:100%;min-height:150px;border:1px solid #d9ddd5;border-radius:9px;padding:12px;resize:vertical" placeholder="Passport reminders, hotel address, check-in details, ideas…"></textarea><div class="tool-actions" style="margin-top:10px"><button class="small-btn" id="saveNotes" type="button">Save notes</button><button class="small-btn" id="clearNotes" type="button">Clear notes</button><button class="small-btn" id="copyNotes" type="button">Copy notes</button></div></article>
         </div>
+      </div>
+
+
+      <div class="v15-feature-grid">
+        <article class="v15-card wide"><h4>Trip members & managers</h4><div class="v15-muted" id="memberManagementHint">People on this trip.</div><div class="v15-list" id="tripMembersList" style="margin-top:10px"></div></article>
+        <article class="v15-card"><h4>Trip polls</h4><div class="v15-form-row"><input id="pollQuestion" placeholder="Ask your group…"><input id="pollOptions" placeholder="Option 1, Option 2, Option 3"><button class="tool-add" id="addPoll" type="button">Add</button></div><div class="v15-list" id="pollList" style="margin-top:12px"></div></article>
+        <article class="v15-card"><h4>Shared expenses & settlement</h4><div class="v15-form-row"><input id="sharedExpenseName" placeholder="Dinner, hotel…"><input id="sharedExpenseAmount" type="number" min="0" step="0.01" placeholder="RM amount"><button class="tool-add" id="addSharedExpense" type="button">Add</button></div><div class="v15-list" id="sharedExpenseList" style="margin-top:12px"></div><div id="settlementList" style="margin-top:12px"></div></article>
       </div>
 
       <div class="modal-actions"><button class="secondary-btn" type="button" data-close="tripDetailModal">Close</button><button class="primary-btn" type="submit">Save trip details</button></div>
@@ -834,11 +847,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     let adminMaintenance = false;
     let stopPasswordRequestsFeed = () => {};
     let stopUserDirectoryFeed = () => {};
-    let stopChatUsersFeed = () => {};
-    let stopChatMessagesFeed = () => {};
-    let chatUsers = {};
-    let chatSearchText = "";
-    let activeChat = null;
+    let userDirectory = {};
 
     function showToast(message) {
       toast.textContent = message;
@@ -913,7 +922,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       const shared = trips.filter(t => Object.keys(t.members || {}).length > 1).length;
       const today = toDateKey(new Date());
       const upcoming = trips.filter(t => t.startDate && t.startDate >= today).length;
-      const people = new Set(Object.keys(chatUsers || {}));
+      const people = new Set(Object.keys(userDirectory || {}));
       trips.forEach(t => Object.keys(t.members || {}).forEach(u => people.add(u)));
       document.getElementById('adminTripCount').textContent = trips.length;
       document.getElementById('adminSharedCount').textContent = shared;
@@ -929,7 +938,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       }
       const list = document.getElementById('adminTravelerList');
       if (list) {
-        const rows = [...people].sort().map(username=>{const count=trips.filter(t=>t.members?.[username]).length; const admin=username==='faiz' || chatUsers[username]?.role==='admin'; return `<div class="admin-user" style="padding:9px 18px;border-bottom:1px solid #eef0e9"><span class="admin-mini-avatar">${escapeHtml(username.slice(0,2).toUpperCase())}</span><div style="min-width:0;flex:1"><strong style="font-size:11px">${escapeHtml(displayName(username))}</strong><div class="admin-badge-note">@${escapeHtml(username)} · ${count} trip${count===1?'':'s'}</div></div><span class="admin-role ${admin?'admin':''}">${admin?'Admin':'Traveler'}</span></div>`;}).join('');
+        const rows = [...people].sort().map(username=>{const count=trips.filter(t=>t.members?.[username]).length; const admin=username==='faiz' || userDirectory[username]?.role==='admin'; return `<div class="admin-user" style="padding:9px 18px;border-bottom:1px solid #eef0e9"><span class="admin-mini-avatar">${escapeHtml(username.slice(0,2).toUpperCase())}</span><div style="min-width:0;flex:1"><strong style="font-size:11px">${escapeHtml(displayName(username))}</strong><div class="admin-badge-note">@${escapeHtml(username)} · ${count} trip${count===1?'':'s'}</div></div><span class="admin-role ${admin?'admin':''}">${admin?'Admin':'Traveler'}</span></div>`;}).join('');
         list.innerHTML = rows || '<div class="admin-empty">No travelers found.</div>';
       }
       renderAdminAccounts();
@@ -938,10 +947,10 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     function renderAdminAccounts() {
       const list=document.getElementById('adminAccountList');
       if(!list) return;
-      const users=Object.keys(chatUsers||{}).sort();
+      const users=Object.keys(userDirectory||{}).sort();
       if(!users.length){list.innerHTML='<div class="admin-empty">No accounts found.</div>';return;}
       list.innerHTML=users.map(username=>{
-        const u=chatUsers[username]||{}; const admin=(username==='faiz'||u.role==='admin');
+        const u=userDirectory[username]||{}; const admin=(username==='faiz'||u.role==='admin');
         return `<div class="admin-account-row"><span class="admin-mini-avatar">${escapeHtml(username.slice(0,2).toUpperCase())}</span><div class="admin-account-copy"><strong>${escapeHtml(u.displayName||displayName(username))}</strong><small>@${escapeHtml(username)} · ${admin?'Admin':'Traveler'}</small></div><span class="admin-role ${admin?'admin':''}">${admin?'Admin':'Traveler'}</span>${username!=='faiz'?`<button class="admin-action danger" type="button" data-admin-delete-user="${escapeHtml(username)}">Delete</button>`:'<span class="admin-badge-note">Protected</span>'}</div>`;
       }).join('');
     }
@@ -959,7 +968,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
 
     function startAdminFeeds() {
       stopUserDirectoryFeed(); stopPasswordRequestsFeed();
-      stopUserDirectoryFeed = onValue(ref(database,'users'), snap=>{ chatUsers=snap.val()||{}; renderAdminCenter(); renderChatLists(); });
+      stopUserDirectoryFeed = onValue(ref(database,'users'), snap=>{ userDirectory=snap.val()||{}; renderAdminCenter(); });
       stopPasswordRequestsFeed = onValue(ref(database,'passwordResetRequests'), snap=>renderResetRequests(snap.val()||{}), handleSyncProblem);
     }
 
@@ -969,14 +978,13 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       const name = displayName(activeUsername);
       document.getElementById('profileName').textContent = name;
       document.getElementById('profileAvatar').textContent = activeUsername.slice(0, 2).toUpperCase();
-      document.getElementById('viewTitle').textContent = `Hi, ${name}`;
+      document.getElementById('viewTitle').textContent = `Good morning, ${name}`;
       loginScreen.classList.add('hidden');
       localStorage.setItem('tripPlannerUsername', activeUsername);
       renderAdminVisibility();
       ensureFaizAdmin(activeUsername);
       if (isAdmin) startAdminFeeds(); else { stopAdminSettingsFeed(); stopUserDirectoryFeed(); stopPasswordRequestsFeed(); stopUserDirectoryFeed=()=>{}; stopPasswordRequestsFeed=()=>{}; }
       startDataSync();
-      startChatFeature();
       get(ref(database, `users/${activeUsername}`)).then(snapshot => {
         const role = snapshot.val()?.role;
         const roleAdmin = activeUsername === 'faiz' || role === 'admin';
@@ -988,85 +996,6 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       }).catch(() => {});
     }
 
-    function chatRoomId(type, targetId) {
-      if (type === 'direct') return `dm_${[activeUsername,targetId].sort().join('__')}`;
-      if (type === 'community') return 'community_lounge';
-      return `trip_${targetId}`;
-    }
-    async function syncTripChatMembers(tripId, trip, extraMembers = []) {
-      if (!tripId || !database) return;
-      const members = new Set([...(Object.keys(trip?.members || {})), ...(extraMembers || [])].filter(Boolean));
-      if (!members.size) return;
-      const changes = {};
-      members.forEach(username => { changes[`chatRooms/trip_${tripId}/members/${username}`] = true; });
-      changes[`chatRooms/trip_${tripId}/tripId`] = tripId;
-      changes[`chatRooms/trip_${tripId}/tripName`] = trip?.name || 'Trip group';
-      changes[`chatRooms/trip_${tripId}/updatedAt`] = Date.now();
-      try { await update(ref(database), changes); } catch (_) { /* Chat can still work when rules are temporarily restrictive. */ }
-    }
-
-    async function syncAllVisibleTripChats() {
-      const visible = Object.entries(allTrips || {}).filter(([id]) => userTripIds[id]);
-      await Promise.all(visible.map(([id, trip]) => syncTripChatMembers(id, trip)));
-    }
-    function formatMalaysiaTime(ts) { return new Intl.DateTimeFormat('en-MY',{timeZone:'Asia/Kuala_Lumpur',hour:'2-digit',minute:'2-digit'}).format(new Date(ts)); }
-    function startChatFeature(){
-      stopChatUsersFeed();
-      stopChatMessagesFeed();
-      stopChatUsersFeed = onValue(ref(database,'users'),snap=>{ chatUsers=snap.val()||{}; renderChatLists(); if(isAdmin) renderAdminCenter(); });
-      renderChatLists();
-      syncAllVisibleTripChats();
-    }
-    function renderChatLists(){
-      const cs=document.getElementById('communityChatList'), ds=document.getElementById('directChatList'), gs=document.getElementById('groupChatList'); if(!cs||!ds||!gs) return;
-      const q=chatSearchText.toLowerCase();
-      const showCommunity=!q||'community everyone general lounge'.includes(q);
-      cs.innerHTML=showCommunity?`<button class="chat-item ${activeChat?.type==='community'?'active':''}" type="button" data-chat-community="lobby"><span class="chat-avatar">✦</span><span class="chat-item-copy"><strong>Community Lounge</strong><small>Everyone can join · General chat</small></span><span class="chat-item-badge">Everyone</span></button>`:'<div class="admin-empty">No community match.</div>';
-      const people=Object.keys(chatUsers||{}).filter(u=>u!==activeUsername).sort((a,b)=>a.localeCompare(b)).filter(u=>!q||`${u} ${displayName(u)}`.toLowerCase().includes(q));
-      ds.innerHTML=people.length?people.map(u=>`<button class="chat-item ${activeChat?.type==='direct'&&activeChat?.targetId===u?'active':''}" type="button" data-chat-direct="${escapeHtml(u)}"><span class="chat-avatar">${escapeHtml(u.slice(0,2).toUpperCase())}</span><span class="chat-item-copy"><strong>${escapeHtml(chatUsers[u]?.displayName||displayName(u))}</strong><small>@${escapeHtml(u)} · Private</small></span><span class="chat-item-badge">1:1</span></button>`).join(''):'<div class="admin-empty">No other users found.</div>';
-      const pendingInvited = Object.values(incomingInvites || {}).filter(inv => inv.status === 'pending' && inv.tripId && allTrips[inv.tripId]);
-      const groupMap = new Map();
-      (activeTrips || []).filter(t=>Object.keys(t.members||{}).length>1).forEach(t => groupMap.set(t.id, t));
-      pendingInvited.forEach(inv => { if (!groupMap.has(inv.tripId)) groupMap.set(inv.tripId, allTrips[inv.tripId]); });
-      const groups=[...groupMap.values()].filter(t=>!q||`${t.name||''} ${t.destination||''}`.toLowerCase().includes(q));
-      gs.innerHTML=groups.length?groups.map(t=>{const memberCount=Object.keys(t.members||{}).length; const pending = pendingInvited.some(inv=>inv.tripId===t.id); return `<button class="chat-item ${activeChat?.type==='group'&&activeChat?.targetId===t.id?'active':''}" type="button" data-chat-group="${escapeHtml(t.id)}"><span class="chat-avatar">#</span><span class="chat-item-copy"><strong>${escapeHtml(t.name||'Trip group')}</strong><small>${escapeHtml(t.destination||'Shared trip')} · ${memberCount||1} travelers${pending?' · Invitation pending':''}</small></span><span class="chat-item-badge">${pending?'Invited':'Group'}</span></button>`;}).join(''):'<div class="admin-empty">No trip groups available yet.</div>';
-    }
-    async function openChat(type,targetId){
-      activeChat={type,targetId};
-      renderChatLists();
-      stopChatMessagesFeed();
-      const roomId=chatRoomId(type,targetId);
-      const headerAvatar=document.getElementById('chatHeaderAvatar'), title=document.getElementById('chatHeaderTitle'), sub=document.getElementById('chatHeaderSubtitle'), input=document.getElementById('chatMessageInput'), send=document.getElementById('chatSend');
-      if(type==='community'){ headerAvatar.textContent='✦'; title.textContent='Community Lounge'; sub.textContent='Everyone · General conversation'; }
-      else if(type==='direct'){ const u=chatUsers[targetId]||{}; headerAvatar.textContent=targetId.slice(0,2).toUpperCase(); title.textContent=u.displayName||displayName(targetId); sub.textContent=`@${targetId} · Private conversation`; }
-      else { const trip=allTrips[targetId]||activeTrips.find(t=>t.id===targetId); const pending = Object.values(incomingInvites||{}).some(inv=>inv.status==='pending'&&inv.tripId===targetId); headerAvatar.textContent='#'; title.textContent=trip?.name||'Trip group'; sub.textContent=`${Object.keys(trip?.members||{}).length||0} travelers · ${pending?'Invitation received · ':''}Shared trip chat`; if(trip) syncTripChatMembers(targetId, trip, pending ? [activeUsername] : []); }
-      input.disabled=false; send.disabled=false; input.focus();
-      stopChatMessagesFeed=onValue(ref(database,`chatRooms/${roomId}/messages`),snap=>{ renderChatMessages(snap.val()||{}); },()=>{
-        const subtitle=document.getElementById('chatHeaderSubtitle');
-        if(subtitle) subtitle.textContent='Chat sync unavailable — check Firebase Realtime Database rules.';
-        showToast('Chat could not load. Check your Firebase chat database rules.');
-      });
-    }
-    function renderChatMessages(data){
-      const box=document.getElementById('chatMessages'); if(!box) return;
-      const rows=Object.entries(data||{}).map(([id,m])=>({id,...m})).sort((a,b)=>(a.createdAt||0)-(b.createdAt||0));
-      if(!rows.length){box.innerHTML='<div class="chat-empty" style="margin-top:120px"><div class="chat-empty-icon">✦</div><h3>No messages yet</h3><p>Send the first message in this conversation.</p></div>';return;}
-      box.innerHTML=rows.map(m=>{const mine=m.sender===activeUsername;return `<div class="chat-message-row ${mine?'mine':''}"><div class="chat-bubble">${!mine?`<div class="chat-author">${escapeHtml(m.displayName||displayName(m.sender))}</div>`:''}<div class="chat-text">${escapeHtml(m.text||'')}</div><div class="chat-time">${formatMalaysiaTime(m.createdAt||Date.now())}</div></div></div>`;}).join('');
-      box.scrollTop=box.scrollHeight;
-    }
-    async function sendChatMessage(text){
-      if(!activeChat) return; const clean=text.trim(); if(!clean) return;
-      const roomId=chatRoomId(activeChat.type,activeChat.targetId);
-      const roomRef=ref(database,`chatRooms/${roomId}/messages`);
-      const newRef=push(roomRef);
-      const payload={sender:activeUsername,displayName:displayName(activeUsername),text:clean,createdAt:Date.now()};
-      try {
-        await set(newRef,payload);
-      } catch (error) {
-        showToast('Message could not be sent. Check Firebase Realtime Database rules for chatRooms.');
-        throw error;
-      }
-    }
     async function createUserAsAdmin(){
       if(!isAdmin) return;
       try{const username=normaliseUsername(document.getElementById('adminCreateUsername').value);const password=document.getElementById('adminCreatePassword').value.trim();const display=document.getElementById('adminCreateDisplayName').value.trim()||displayName(username);const role=document.getElementById('adminCreateRole').value;if(password.length<1)throw new Error('Enter an initial password.');const existing=await get(ref(database,`users/${username}`));if(existing.exists())throw new Error('That username already exists.');await set(ref(database,`users/${username}`),{username,password,displayName:display,role,createdAt:Date.now(),createdBy:activeUsername});showToast(`@${username} was created.`);document.getElementById('adminCreateUsername').value='';document.getElementById('adminCreatePassword').value='';document.getElementById('adminCreateDisplayName').value='';document.getElementById('adminCreateRole').value='traveler';}catch(e){showToast(e.message||'Could not create user.');}
@@ -1182,7 +1111,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       renderCalendar();
       renderComingUp();
       renderInspirations();
-      renderChatLists();
+     
       if (toolkitTripId) renderToolkit();
     }
 
@@ -1325,7 +1254,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     }
 
     function startDataSync() {
-      stopTripFeed(); stopMembershipFeed(); stopInviteFeed(); stopInspirationFeed(); stopPasswordRequestsFeed(); stopUserDirectoryFeed(); stopChatMessagesFeed(); stopTripFeed=()=>{}; stopMembershipFeed=()=>{}; stopInviteFeed=()=>{}; stopInspirationFeed=()=>{}; stopPasswordRequestsFeed=()=>{}; stopUserDirectoryFeed=()=>{}; stopChatMessagesFeed=()=>{}; activeChat=null;
+      stopTripFeed(); stopMembershipFeed(); stopInviteFeed(); stopInspirationFeed(); stopPasswordRequestsFeed(); stopUserDirectoryFeed(); stopTripFeed=()=>{}; stopMembershipFeed=()=>{}; stopInviteFeed=()=>{}; stopInspirationFeed=()=>{}; stopPasswordRequestsFeed=()=>{}; stopUserDirectoryFeed=()=>{};;
       allTrips = {}; userTripIds = {}; incomingInvites = {}; userInspirations = {}; inspirationSeeded=false;
       syncProblemShown = false;
       refreshTripViews(); renderInvites();
@@ -1362,7 +1291,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       const container = document.getElementById(containerId);
       const hidden = document.getElementById(hiddenInputId);
       if (!container || !hidden) return;
-      const users = Object.keys(chatUsers || {}).filter(username => username !== activeUsername).sort((a,b) => a.localeCompare(b));
+      const users = Object.keys(userDirectory || {}).filter(username => username !== activeUsername).sort((a,b) => a.localeCompare(b));
       const selected = new Set(selectedValues.map(normaliseUsername));
       if (!users.length) {
         container.innerHTML = '<div class="user-picker-empty">No other registered users yet.</div>';
@@ -1502,6 +1431,34 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       }
     }
 
+    function tripMemberRole(trip, username){
+      if(!trip) return 'member';
+      const roles=trip.memberRoles||{};
+      if(roles[username]) return roles[username];
+      if(trip.createdBy===username) return 'owner';
+      return 'member';
+    }
+    function canManageMembers(trip){ const role=tripMemberRole(trip,activeUsername); return isAdmin || role==='owner' || role==='manager'; }
+    function renderTripCollaboration(trip){
+      const list=document.getElementById('tripMembersList');
+      if(!list||!trip)return;
+      const members=Object.keys(trip.members||{}); const canManage=canManageMembers(trip);
+      document.getElementById('memberManagementHint').textContent=canManage?'Owners/managers can promote or remove members.':'You can view members; only owners and managers can change membership roles.';
+      list.innerHTML=members.map(u=>{const role=tripMemberRole(trip,u);const self=u===activeUsername;return `<div class="v15-row"><div><strong>@${escapeHtml(u)}</strong><div class="v15-muted">${role}${self?' · you':''}</div></div><div class="v15-actions">${canManage && role!=='owner' ? `<button class="v15-mini" data-role-user="${escapeHtml(u)}">${role==='manager'?'Remove manager':'Make manager'}</button><button class="v15-mini v15-danger" data-remove-user="${escapeHtml(u)}">Remove</button>`:''}</div></div>`}).join('') || '<div class="v15-muted">No members yet.</div>';
+      renderPolls(trip); renderSharedExpenses(trip);
+    }
+    function renderPolls(trip){
+      const list=document.getElementById('pollList'); if(!list)return; const polls=trip.polls||{};
+      list.innerHTML=Object.entries(polls).map(([id,p])=>{const votes=p.votes||{};const counts=(p.options||[]).map(o=>Object.values(votes).filter(v=>v===o).length);const total=Object.keys(votes).length;return `<div class="v15-row"><div style="width:100%"><strong>${escapeHtml(p.question)}</strong><div class="v15-list" style="margin-top:7px">${(p.options||[]).map((o,i)=>{const pct=total?Math.round(counts[i]*100/total):0;return `<div class="v15-option"><button class="v15-mini" data-vote="${id}" data-option="${escapeHtml(o)}">${escapeHtml(o)}</button><div style="flex:1"><div class="v15-bar"><span style="width:${pct}%"></span></div></div><span class="v15-muted">${counts[i]}</span></div>`}).join('')}</div><div class="v15-muted" style="margin-top:6px">${total} vote${total===1?'':'s'} · ${escapeHtml(p.createdBy||'')}</div></div></div>`}).join('')||'<div class="v15-muted">No polls yet.</div>';
+    }
+    async function addTripPoll(){const trip=activeTrips.find(t=>t.id===editingTripId);if(!trip)return;const q=document.getElementById('pollQuestion').value.trim();const opts=[...new Set(document.getElementById('pollOptions').value.split(',').map(x=>x.trim()).filter(Boolean))];if(!q||opts.length<2)return showToast('Enter a question and at least two options.');const id=push(ref(database,`tripPlans/${editingTripId}/polls`)).key;await set(ref(database,`tripPlans/${editingTripId}/polls/${id}`),{question:q,options:opts,createdBy:activeUsername,createdAt:Date.now(),votes:{}});document.getElementById('pollQuestion').value='';document.getElementById('pollOptions').value='';showToast('Poll added.');}
+    async function votePoll(id,option){if(!editingTripId)return;await set(ref(database,`tripPlans/${editingTripId}/polls/${id}/votes/${activeUsername}`),option);showToast('Vote saved.');}
+    function renderSharedExpenses(trip){const list=document.getElementById('sharedExpenseList');const settlement=document.getElementById('settlementList');if(!list||!settlement)return;const expenses=trip.sharedExpenses||{};const members=Object.keys(trip.members||{});list.innerHTML=Object.entries(expenses).map(([id,e])=>`<div class="v15-row"><div><strong>${escapeHtml(e.name)}</strong><div class="v15-muted">${money(e.amount)} · paid by @${escapeHtml(e.paidBy||'')} · split equally</div></div><button class="v15-mini v15-danger" data-delete-expense="${id}">Delete</button></div>`).join('')||'<div class="v15-muted">No shared expenses yet.</div>';const balances={};members.forEach(u=>balances[u]=0);Object.values(expenses).forEach(e=>{const amt=Number(e.amount)||0;const n=members.length||1;members.forEach(u=>{balances[u]-=amt/n;if(u===e.paidBy)balances[u]+=amt;});});settlement.innerHTML='<div class="v15-muted" style="margin-bottom:6px">Settlement</div>'+members.map(u=>{const b=balances[u]||0;const label=b>0.004?`gets ${money(b)}`:b<-0.004?`owes ${money(Math.abs(b))}`:'settled';return `<div class="v15-row"><strong>@${escapeHtml(u)}</strong><span class="v15-muted">${label}</span></div>`}).join('');}
+    async function addSharedExpense(){const trip=activeTrips.find(t=>t.id===editingTripId);if(!trip)return;const name=document.getElementById('sharedExpenseName').value.trim();const amount=Number(document.getElementById('sharedExpenseAmount').value);if(!name||!(amount>0))return showToast('Enter an expense name and amount.');const id=push(ref(database,`tripPlans/${editingTripId}/sharedExpenses`)).key;await set(ref(database,`tripPlans/${editingTripId}/sharedExpenses/${id}`),{name,amount,paidBy:activeUsername,createdBy:activeUsername,createdAt:Date.now()});document.getElementById('sharedExpenseName').value='';document.getElementById('sharedExpenseAmount').value='';showToast('Shared expense added.');}
+    async function removeSharedExpense(id){if(!confirm('Remove this shared expense?'))return;await set(ref(database,`tripPlans/${editingTripId}/sharedExpenses/${id}`),null);}
+    async function toggleTripManager(username){const trip=activeTrips.find(t=>t.id===editingTripId);if(!trip||!canManageMembers(trip)||tripMemberRole(trip,username)==='owner')return;const current=tripMemberRole(trip,username);await set(ref(database,`tripPlans/${editingTripId}/memberRoles/${username}`),current==='manager'?'member':'manager');}
+    async function removeTripMember(username){const trip=activeTrips.find(t=>t.id===editingTripId);if(!trip||!canManageMembers(trip)||username===trip.createdBy)return; if(!confirm(`Remove @${username} from this trip?`))return;const changes={[`tripPlans/${editingTripId}/members/${username}`]:null,[`tripPlans/${editingTripId}/memberRoles/${username}`]:null,[`userTrips/${username}/${editingTripId}`]:null};await update(ref(database),changes);}
+
     document.getElementById('loginForm').addEventListener('submit', async event => {
       event.preventDefault();
       try {
@@ -1531,12 +1488,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     document.getElementById('forgot').addEventListener('click', event => { event.preventDefault(); document.getElementById('recoveryUsername').value=document.getElementById('username').value.trim().toLowerCase(); document.getElementById('recoveryReason').value=''; document.getElementById('passwordRecoveryModal').classList.add('open'); });
     document.getElementById('passwordRecoveryForm').addEventListener('submit', event => { event.preventDefault(); submitPasswordResetRequest(); });
     document.getElementById('adminCreateUser')?.addEventListener('click', createUserAsAdmin);
-    document.getElementById('chatSearch')?.addEventListener('input', event => { chatSearchText=event.target.value; renderChatLists(); });
-    document.getElementById('newDirectChat')?.addEventListener('click', () => { document.getElementById('chatSearch')?.focus(); document.getElementById('chatSearch')?.select(); showToast('Choose any person below to start a private chat.'); });
-    document.getElementById('refreshChat')?.addEventListener('click', () => { renderChatLists(); if(activeChat) openChat(activeChat.type, activeChat.targetId); });
-    document.getElementById('chatHelp')?.addEventListener('click', () => showToast('Everyone chat + personal chat use Firebase Realtime Database under chatRooms/. If messages do not send, deploy the included chat rules.'));
-    document.getElementById('chatComposer')?.addEventListener('submit', async event => { event.preventDefault(); const input=document.getElementById('chatMessageInput'); const text=input.value; if(!text.trim()) return; input.value=''; try{await sendChatMessage(text);}catch(e){showToast('Message could not be sent.');input.value=text;} });
-    document.addEventListener('click', event => { const c=event.target.closest('[data-chat-community]'); if(c) openChat('community','lobby'); const d=event.target.closest('[data-chat-direct]'); if(d) openChat('direct',d.dataset.chatDirect); const g=event.target.closest('[data-chat-group]'); if(g) openChat('group',g.dataset.chatGroup); const du=event.target.closest('[data-admin-delete-user]'); if(du) deleteUserAsAdmin(du.dataset.adminDeleteUser); const ar=event.target.closest('[data-approve-reset]'); if(ar) approveResetRequest(ar.dataset.approveReset); const dr=event.target.closest('[data-deny-reset]'); if(dr) denyResetRequest(dr.dataset.denyReset); });
+    document.addEventListener('click', event => { const du=event.target.closest('[data-admin-delete-user]'); if(du) deleteUserAsAdmin(du.dataset.adminDeleteUser); const ar=event.target.closest('[data-approve-reset]'); if(ar) approveResetRequest(ar.dataset.approveReset); const dr=event.target.closest('[data-deny-reset]'); if(dr) denyResetRequest(dr.dataset.denyReset); });
     document.getElementById('dismissAnnouncement').addEventListener('click', () => {
       if (!adminAnnouncement) return;
       localStorage.setItem('tripPlannerAnnouncementDismissed', String(adminAnnouncement.updatedAt || ''));
@@ -1545,7 +1497,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     document.getElementById('topSignOut').addEventListener('click', () => document.getElementById('profileButton').click());
     document.getElementById('profileButton').addEventListener('click', () => {
       localStorage.removeItem('tripPlannerUsername');
-      stopTripFeed(); stopMembershipFeed(); stopInviteFeed(); stopInspirationFeed(); stopChatUsersFeed(); stopChatMessagesFeed(); stopPasswordRequestsFeed(); stopUserDirectoryFeed(); stopChatUsersFeed=()=>{}; stopChatMessagesFeed=()=>{}; stopPasswordRequestsFeed=()=>{}; stopUserDirectoryFeed=()=>{}; activeChat=null;
+      stopTripFeed(); stopMembershipFeed(); stopInviteFeed(); stopInspirationFeed(); stopPasswordRequestsFeed(); stopUserDirectoryFeed(); stopPasswordRequestsFeed=()=>{}; stopUserDirectoryFeed=()=>{};
       activeUsername = 'traveler'; isAdmin=false; userInspirations = {}; inspirationSeeded=false; stopAdminSettingsFeed(); stopAdminSettingsFeed=()=>{}; renderAdminVisibility();
       loginScreen.classList.remove('hidden');
       passwordInput.value = '';
@@ -1568,7 +1520,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
 
     const views = document.querySelectorAll('.content-view');
     const navItems = document.querySelectorAll('.nav-item');
-    const titles = { overview: 'Good morning, Alex', calendar: 'Plan your days', plans: 'Your little escapes', groups: 'Travel, together', chat: 'Messages', inspiration: 'Places worth remembering', toolkit: 'Your trip toolkit', admin: 'Admin center' };
+    const titles = { overview: 'Good morning, Alex', calendar: 'Plan your days', plans: 'Your little escapes', groups: 'Travel, together', inspiration: 'Places worth remembering', toolkit: 'Your trip toolkit', admin: 'Admin center' };
     function switchView(viewId) {
       if (viewId === 'admin' && !isAdmin) { showToast('Admin access is reserved for Faiz.'); return; }
       views.forEach(view => view.classList.toggle('active', view.id === viewId));
@@ -1605,6 +1557,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
       document.getElementById('tripDetailSubtitle').textContent = toolkitMemberCount(trip) > 1 ? `${toolkitMemberCount(trip)} travelers · shared editing is enabled` : 'Keep every part of this trip in one shared place.';
       openModal(tripDetailModal);
       renderToolkit();
+      renderTripCollaboration(trip);
       renderOtherMemberAvailability(trip);
     }
     document.getElementById('newPlan').addEventListener('click', () => { const d=new Date(); const start=document.getElementById('startDate'); const end=document.getElementById('endDate'); document.getElementById('tripPeople').value=''; if(!start.value){ const k=toDateKey(d); start.value=k; const e=new Date(d); e.setDate(e.getDate()+2); end.value=toDateKey(e); } refreshUserPickers(); openModal(planModal); });
@@ -1655,6 +1608,7 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
           tripType: document.getElementById('tripType').value,
           createdBy: activeUsername,
           members: Object.fromEntries([activeUsername, ...people].map(username => [username, true])),
+          memberRoles: Object.fromEntries([activeUsername, ...people].map(username => [username, username === activeUsername ? 'owner' : 'member'])),
           createdAt: Date.now(),
           toolkit: {}
         };
@@ -1714,7 +1668,6 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
         Object.keys(trip.members || {}).filter(username => !members[username]).forEach(username => { changes[`userTrips/${username}/${editingTripId}`] = null; });
         participants.forEach(username => { changes[`userTrips/${username}/${editingTripId}`] = true; });
         await update(ref(database), changes);
-        await syncTripChatMembers(editingTripId, { ...trip, members });
         closeModal(tripDetailModal);
         showToast('Trip details saved for everyone in the plan.');
       } catch (error) {
@@ -1742,7 +1695,6 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
           changes[`tripInvites/${invitee}/${inviteId}`] = { tripId, tripName: trip.name, invitedBy: activeUsername, invitedAt: Date.now(), status: 'pending' };
         });
         await update(ref(database), changes);
-        await syncTripChatMembers(tripId, trip, targets.concat(activeUsername));
         closeModal(inviteModal);
         event.target.reset();
         document.getElementById('inviteUser').value = '';
@@ -1775,12 +1727,12 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
           if (!invite.tripId || !allTrips[invite.tripId]) throw new Error('That trip is no longer available.');
           changes[`userTrips/${activeUsername}/${invite.tripId}`] = true;
           changes[`tripPlans/${invite.tripId}/members/${activeUsername}`] = true;
+          changes[`tripPlans/${invite.tripId}/memberRoles/${activeUsername}`] = 'member';
         }
         await update(ref(database), changes);
         if (isAccepted && invite.tripId) {
-          await syncTripChatMembers(invite.tripId, allTrips[invite.tripId], [activeUsername, invite.invitedBy]);
         }
-        showToast(isAccepted ? `“${invite.tripName}” has been added to your trips and its group chat.` : 'Invitation declined.');
+        showToast(isAccepted ? `“${invite.tripName}” has been added to your trips.` : 'Invitation declined.');
       } catch (error) {
         button.disabled = false;
         showToast(error.message || 'We could not update that invitation.');
@@ -1851,6 +1803,11 @@ button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, i
     document.getElementById('deleteTripFromDetails').addEventListener('click', () => {
       if (editingTripId) deleteTrip(editingTripId);
     });
+    document.getElementById('addPoll').addEventListener('click', addTripPoll);
+    document.getElementById('addSharedExpense').addEventListener('click', addSharedExpense);
+    document.getElementById('tripMembersList').addEventListener('click', async e=>{const r=e.target.closest('[data-role-user]');if(r) await toggleTripManager(r.dataset.roleUser);const d=e.target.closest('[data-remove-user]');if(d) await removeTripMember(d.dataset.removeUser);});
+    document.getElementById('pollList').addEventListener('click', async e=>{const b=e.target.closest('[data-vote]');if(b) await votePoll(b.dataset.vote,b.dataset.option);});
+    document.getElementById('sharedExpenseList').addEventListener('click', async e=>{const b=e.target.closest('[data-delete-expense]');if(b) await removeSharedExpense(b.dataset.deleteExpense);});
 
     document.getElementById('addBudget').addEventListener('click', async () => { const name=document.getElementById('budgetItem').value.trim(); const amount=Number(document.getElementById('budgetAmount').value); if(!name||!(amount>=0)) return showToast('Enter a budget item and amount.'); const ok=await updateToolkit(d=>{(d.budget ||= []).push({name,amount,by:activeUsername,at:Date.now()});}); if(ok){document.getElementById('budgetItem').value='';document.getElementById('budgetAmount').value='';} });
     document.getElementById('addPacking').addEventListener('click', async () => { const name=document.getElementById('packingItem').value.trim(); if(!name) return; const ok=await updateToolkit(d=>{(d.packing ||= []).push({name,done:false,by:activeUsername,at:Date.now()});}); if(ok) document.getElementById('packingItem').value=''; });

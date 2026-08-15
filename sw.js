@@ -1,4 +1,4 @@
-const CACHE_NAME = "trip-planner-mobile-v13-2";
+const CACHE_NAME = 'trip-planner-v14-1'";
 const APP_SHELL = ["./", "./index.html", "./manifest.webmanifest", "./trip-planner-icon.svg"];
 
 self.addEventListener("install", event => {
