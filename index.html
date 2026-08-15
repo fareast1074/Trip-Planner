@@ -419,7 +419,131 @@
     .chat-panel{display:flex;flex-direction:column;min-width:0;background:white}.chat-header{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;min-height:58px}.chat-header-avatar{width:36px;height:36px;border-radius:12px;background:#eaf0e5;color:#466b54;display:grid;place-items:center;font-size:11px;font-weight:900}.chat-header strong,.chat-header span{display:block}.chat-header strong{font-size:13px}.chat-header span{font-size:9px;color:var(--muted);margin-top:3px}.chat-messages{flex:1;min-height:430px;padding:18px;overflow:auto;background:linear-gradient(#fffefa,#fff)}.chat-empty{text-align:center;max-width:340px;margin:100px auto 0;color:var(--muted)}.chat-empty-icon{width:46px;height:46px;border-radius:14px;background:#edf4e9;color:#466b54;display:grid;place-items:center;margin:0 auto 10px;font-size:20px}.chat-empty h3{font-family:Georgia,serif;color:var(--ink);margin:0 0 6px;font-size:20px}.chat-empty p{font-size:10px;line-height:1.55;margin:0}.chat-message-row{display:flex;margin:7px 0}.chat-message-row.mine{justify-content:flex-end}.chat-bubble{max-width:min(70%,520px);padding:9px 11px;border-radius:13px;background:#f1f4ee;border:1px solid #e5e9e1}.chat-message-row.mine .chat-bubble{background:#edf4e9;border-color:#d7e5d1}.chat-author{font-size:8px;color:#6e7b73;font-weight:800;margin-bottom:3px}.chat-text{font-size:11px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}.chat-time{font-size:7px;color:#909a93;margin-top:5px}.chat-composer{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:#fbfcf8}.chat-composer input{flex:1;border:1px solid #d9ddd5;border-radius:11px;padding:10px 11px;outline:none;background:white}.chat-composer .primary-btn{min-width:74px}.admin-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.admin-account-row{display:flex;align-items:center;gap:9px;padding:9px 18px;border-bottom:1px solid #eef0e9}.admin-account-copy{min-width:0;flex:1}.admin-account-copy strong,.admin-account-copy small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.admin-account-copy small{font-size:9px;color:var(--muted);margin-top:2px}.reset-row{padding:12px 18px;border-bottom:1px solid #eef0e9}.reset-meta{font-size:9px;color:var(--muted);margin-top:4px;line-height:1.45}.reset-actions{display:flex;gap:6px;margin-top:8px}.reset-actions input{flex:1;border:1px solid #d9ddd5;border-radius:8px;padding:7px 8px}.chat-system-note{font-size:8px;color:#7a867e;text-align:center;margin:12px 0}.chat-unread{width:7px;height:7px;border-radius:50%;background:#a85e41;display:inline-block}.admin-form select{border:1px solid #d9ddd5;border-radius:8px;padding:10px 11px;background:white;color:var(--ink)}
     @media (max-width: 1000px) { .admin-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.admin-columns{grid-template-columns:1fr;}.chat-shell{grid-template-columns:1fr;}.chat-sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.chat-messages{min-height:360px}.admin-input-grid{grid-template-columns:1fr;} }
 
-  </style>
+  /* ===== Mobile-first V13.1 optimization ===== */
+html, body { overflow-x: hidden; }
+body { padding-bottom: env(safe-area-inset-bottom); }
+button, .nav-item, .primary-btn, .secondary-btn, .text-btn, .icon-btn, select, input, textarea { touch-action: manipulation; }
+
+@media (max-width: 760px) {
+  :root { --mobile-pad: 14px; }
+  body { min-width: 320px; font-size: 14px; }
+  .login-screen { grid-template-columns: 1fr; min-height: 100dvh; }
+  .login-visual { display: none; }
+  .login-panel { min-height: 100dvh; padding: 24px 18px; align-items: start; padding-top: max(24px, env(safe-area-inset-top)); }
+  .auth-card { width: 100%; max-width: 430px; margin: auto; }
+  .auth-card h2 { font-size: 30px; }
+  .auth-card > p { margin-bottom: 22px; }
+  .field { margin-bottom: 14px; }
+  .field input, .field select, .field textarea { min-height: 46px; font-size: 16px; }
+  .auth-tabs { margin-bottom: 20px; }
+
+  .app { display: block; min-height: 100dvh; padding-bottom: 74px; }
+  .sidebar {
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 1000;
+    min-height: 0; height: calc(64px + env(safe-area-inset-bottom));
+    padding: 5px 8px env(safe-area-inset-bottom); border-right: 0; border-top: 1px solid var(--line);
+    background: rgba(251,250,245,.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 -8px 26px rgba(31,57,40,.08);
+  }
+  .sidebar .brand, .sidebar .nav-label, .side-bottom { display: none; }
+  .sidebar .nav { display: flex; gap: 3px; width: 100%; align-items: stretch; overflow-x: auto; scrollbar-width: none; }
+  .sidebar .nav::-webkit-scrollbar { display: none; }
+  .nav-item {
+    position: relative; flex: 1 0 72px; min-width: 64px; max-width: 110px; justify-content: center; flex-direction: column;
+    gap: 3px; padding: 6px 4px; border-radius: 10px; font-size: 9px; line-height: 1.1; text-align: center;
+  }
+  .nav-item .nav-icon { width: 20px; height: 20px; }
+  .nav-dot { position: absolute !important; right: 18px; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: #c87756; }
+
+  .main { min-height: 100dvh; padding: max(14px, env(safe-area-inset-top)) var(--mobile-pad) 24px; }
+  .topbar { align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+  .welcome { min-width: 0; flex: 1; }
+  .welcome p { font-size: 11px; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .welcome h1 { font-size: 24px; line-height: 1.1; }
+  .top-actions { gap: 7px; flex: 0 0 auto; }
+  .top-actions .primary-btn, .top-actions .top-signout { min-height: 42px; padding: 10px 12px; font-size: 12px; }
+  .top-actions svg { width: 15px; height: 15px; }
+  .top-actions .top-signout { width: 42px; padding: 0; font-size: 0; }
+
+  .overview-grid, .lower-grid { grid-template-columns: 1fr !important; gap: 14px; }
+  .overview-stats { grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 8px; }
+  .section-title { margin-bottom: 10px; }
+  .section-title h2 { font-size: 18px; }
+  .trip-card { min-height: 235px; padding: 20px; border-radius: 15px; }
+  .trip-card h2 { font-size: 27px; margin-top: 14px; }
+  .trip-meta { gap: 15px; margin-top: 26px; flex-wrap: wrap; }
+  .mini-card { min-height: 0; padding: 17px; }
+  .overview-stat { padding: 14px; border-radius: 13px; }
+
+  .calendar-tools { flex-wrap: wrap; gap: 10px; }
+  .calendar-tools h2 { font-size: 18px; }
+  .calendar-controls { width: 100%; justify-content: space-between; }
+  .calendar-controls button { min-height: 40px; }
+  .calendar-shell { overflow: hidden; }
+  .calendar-days, .calendar-grid { gap: 3px; }
+  .calendar-days > div { font-size: 9px; }
+  .calendar-cell { min-height: 58px; padding: 5px; border-radius: 8px; }
+  .calendar-cell .day-number { font-size: 11px; }
+  .calendar-event { font-size: 8px; padding: 3px 4px; }
+  .calendar-summary { grid-template-columns: 1fr; gap: 8px; }
+
+  .plans-head, .group-intro { flex-direction: column; align-items: stretch; gap: 12px; }
+  .plans-head h2, .group-intro h2 { font-size: 25px; }
+  .plans-toolbar { grid-template-columns: 1fr; gap: 8px; }
+  .plans-toolbar > * { min-width: 0; }
+  .plans-search input, .plans-toolbar select { min-height: 44px; font-size: 15px; }
+  .plans-grid { grid-template-columns: 1fr !important; gap: 12px; }
+
+  .form-grid { grid-template-columns: 1fr !important; gap: 12px; }
+  .form-grid .full { grid-column: 1 / -1; }
+  .modal-layer { padding: 0; align-items: flex-end; }
+  .modal {
+    width: 100%; max-width: none; max-height: 92dvh; margin: 0; border-radius: 18px 18px 0 0;
+    padding: 18px 15px calc(18px + env(safe-area-inset-bottom)); overflow-y: auto;
+  }
+  .modal-header { gap: 10px; position: sticky; top: -18px; z-index: 2; padding: 0 0 10px; background: var(--cream); }
+  .modal-header h2 { font-size: 23px; }
+  .modal-actions { position: sticky; bottom: calc(-18px - env(safe-area-inset-bottom)); z-index: 2; margin: 10px -15px -18px; padding: 12px 15px calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(180deg, rgba(247,245,238,.9), var(--cream)); }
+  .modal-actions .primary-btn, .modal-actions .secondary-btn { flex: 1; min-height: 46px; }
+  .close-btn { width: 40px; height: 40px; }
+
+  #tripDetailModal .modal { max-height: 94dvh; }
+  .trip-detail-grid, .trip-detail-layout, .detail-grid, .toolkit-grid, .expense-grid, .poll-grid { grid-template-columns: 1fr !important; }
+  .trip-detail-header { flex-direction: column; align-items: stretch; gap: 10px; }
+  .trip-detail-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 7px; }
+  .trip-detail-actions button { width: 100%; min-height: 42px; }
+
+  .user-picker { max-height: 230px; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .user-picker-item, .user-picker label { min-height: 44px; padding: 9px 10px; }
+  .availability-panel { max-height: 210px; overflow-y: auto; }
+
+  .chat-layout { grid-template-columns: 1fr !important; min-height: 0 !important; }
+  .chat-list { max-height: 210px; border-right: 0 !important; border-bottom: 1px solid var(--line); overflow-x: auto; display: flex; gap: 8px; }
+  .chat-list-item { min-width: 150px; flex: 0 0 auto; }
+  .chat-main { min-height: 420px; }
+  .chat-messages { min-height: 310px !important; max-height: 52dvh !important; }
+  .chat-compose input, .chat-compose textarea { font-size: 16px; }
+
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 620px; }
+  .admin-grid { grid-template-columns: 1fr !important; }
+
+  .toast, .network-toast { left: 12px !important; right: 12px !important; bottom: 82px !important; width: auto !important; max-width: none !important; }
+  .dropdown-menu { max-width: calc(100vw - 24px); }
+  .secondary-btn, .primary-btn { min-height: 42px; }
+}
+
+@media (max-width: 420px) {
+  .main { padding-left: 11px; padding-right: 11px; }
+  .top-actions .primary-btn { font-size: 0; width: 42px; padding: 0; }
+  .top-actions .primary-btn svg { width: 17px; height: 17px; }
+  .overview-stats { grid-template-columns: 1fr 1fr !important; }
+  .calendar-cell { min-height: 52px; }
+  .calendar-event { display: none; }
+  .nav-item { min-width: 60px; font-size: 8.5px; }
+}
+
+</style>
 </head>
 <body>
   <section class="login-screen" id="loginScreen" aria-label="Sign in">
@@ -465,7 +589,7 @@
 
     <main class="main">
       <header class="topbar">
-        <div class="welcome"><p id="malaysiaDateTime">Friday, 15 August · 9:00:00 PM</p><h1 id="viewTitle">Hi, Alex</h1></div>
+        <div class="welcome"><p id="malaysiaDateTime">Friday, 15 August · 9:00:00 PM</p><h1 id="viewTitle">Good morning, Alex</h1></div>
         <div class="top-actions"><button class="primary-btn" id="newPlan"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>New plan</button><button class="secondary-btn top-signout" id="topSignOut" type="button"><svg viewBox="0 0 24 24"><path d="M10 6V4a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-2"/><path d="M15 12H3m4-4-4 4 4 4"/></svg>Sign out</button></div>
       </header>
       <div class="admin-announcement" id="announcementBanner" hidden><div><strong id="announcementLabel">Trip Planner update</strong><p id="announcementText"></p></div><button type="button" id="dismissAnnouncement">Dismiss</button></div>
@@ -845,7 +969,7 @@
       const name = displayName(activeUsername);
       document.getElementById('profileName').textContent = name;
       document.getElementById('profileAvatar').textContent = activeUsername.slice(0, 2).toUpperCase();
-      document.getElementById('viewTitle').textContent = `Hi, ${name}`;
+      document.getElementById('viewTitle').textContent = `Good morning, ${name}`;
       loginScreen.classList.add('hidden');
       localStorage.setItem('tripPlannerUsername', activeUsername);
       renderAdminVisibility();
